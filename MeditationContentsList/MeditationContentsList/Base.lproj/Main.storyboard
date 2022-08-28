@@ -13,13 +13,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeditationContentsList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MeditationContentsList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fni-d7-Cut">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AoT-YL-mCJ">
                                     <size key="itemSize" width="414" height="151"/>
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Anc-Af-lLD">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MeditationCollectionViewCell" id="Anc-Af-lLD" customClass="MeditationCollectionViewCell" customModule="MeditationContentsList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ez1-TE-2xf">
@@ -69,19 +69,46 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="151"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="0QA-ik-lxI" id="TnY-aK-XHO"/>
+                                            <outlet property="titleLabel" destination="7sx-Fb-nzD" id="9GO-fe-13W"/>
+                                            <outlet property="weatherImageView" destination="N92-1g-RI4" id="qyE-dF-p7Z"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTb-wA-fXF">
+                                <rect key="frame" x="50" y="802" width="314" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5Nr-Ea-HQ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="See All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeModeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQh-p1-7Yj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fni-d7-Cut" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Vb-Qq-mC3"/>
                             <constraint firstItem="fni-d7-Cut" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fQh-a3-Rmb"/>
+                            <constraint firstItem="lTb-wA-fXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="jOp-QU-FE4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fni-d7-Cut" secondAttribute="trailing" id="k97-Kb-y1z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fni-d7-Cut" secondAttribute="bottom" id="y1k-F2-Gzt"/>
+                            <constraint firstItem="lTb-wA-fXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mVq-sW-FY0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lTb-wA-fXF" secondAttribute="bottom" id="wP5-HG-0Al"/>
+                            <constraint firstAttribute="bottom" secondItem="fni-d7-Cut" secondAttribute="bottom" id="y1k-F2-Gzt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeModeButton" destination="lTb-wA-fXF" id="Woc-1q-EKk"/>
+                        <outlet property="collectionView" destination="fni-d7-Cut" id="wTi-rh-xrf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,6 +119,9 @@
         <image name="cloud.heavyrain.fill" catalog="system" width="125" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
