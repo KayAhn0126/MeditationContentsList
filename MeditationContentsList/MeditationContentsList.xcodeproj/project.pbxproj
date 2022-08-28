@@ -13,6 +13,8 @@
 		6A6B9DAE28BB78FD00B0A19F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6B9DAC28BB78FD00B0A19F /* Main.storyboard */; };
 		6A6B9DB028BB78FE00B0A19F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6B9DAF28BB78FE00B0A19F /* Assets.xcassets */; };
 		6A6B9DB328BB78FE00B0A19F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6B9DB128BB78FE00B0A19F /* LaunchScreen.storyboard */; };
+		6A6B9DBB28BB799B00B0A19F /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6B9DBA28BB799B00B0A19F /* Meditation.swift */; };
+		6A6B9DBD28BB7E7900B0A19F /* MeditationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6B9DBC28BB7E7900B0A19F /* MeditationCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		6A6B9DAF28BB78FE00B0A19F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A6B9DB228BB78FE00B0A19F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A6B9DB428BB78FE00B0A19F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A6B9DBA28BB799B00B0A19F /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		6A6B9DBC28BB7E7900B0A19F /* MeditationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				6A6B9DAF28BB78FE00B0A19F /* Assets.xcassets */,
 				6A6B9DB128BB78FE00B0A19F /* LaunchScreen.storyboard */,
 				6A6B9DB428BB78FE00B0A19F /* Info.plist */,
+				6A6B9DBA28BB799B00B0A19F /* Meditation.swift */,
+				6A6B9DBC28BB7E7900B0A19F /* MeditationCollectionViewCell.swift */,
 			);
 			path = MeditationContentsList;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A6B9DAB28BB78FD00B0A19F /* ViewController.swift in Sources */,
+				6A6B9DBD28BB7E7900B0A19F /* MeditationCollectionViewCell.swift in Sources */,
+				6A6B9DBB28BB799B00B0A19F /* Meditation.swift in Sources */,
 				6A6B9DA728BB78FD00B0A19F /* AppDelegate.swift in Sources */,
 				6A6B9DA928BB78FD00B0A19F /* SceneDelegate.swift in Sources */,
 			);
