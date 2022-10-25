@@ -1,4 +1,4 @@
-# 8. MeditationContentsList
+# MeditationContentsList
 
 ## 🍎 작동화면
 
@@ -53,4 +53,5 @@ dataSource.apply(snapshot, animatingDifferences: false)
 
 ## 🍎 오토레이아웃 문제
 ![](https://i.imgur.com/jT2wajy.jpg)
-- 앱을 실행하는데는 문제 없지만 현재 무엇을 고쳐야 하는지 잘 몰라서, 나중에 저 경고창을 없앨수 있는 실력을 가졌을때 다시 돌아와서 해결해보자!
+- 앱을 실행하는데는 문제 없지만 현재 무엇을 고쳐야 하는지 잘 몰라서, 나중에 저 경고창을 없앨수 있는 실력을 가졌을때 다시 돌아와서 해결해보자! 
+- 2022/10/25 생각-> 화면 아래의 "See Recommendation" 버튼이 collection view의 cell과 같은 공간에 위치하고 있어 경고가 들어오는것으로 추정
